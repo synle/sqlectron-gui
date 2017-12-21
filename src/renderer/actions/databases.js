@@ -109,9 +109,9 @@ export function openDatabaseDiagram() {
 }
 
 
-export function fetchDatabasesIfNeeded (filter) {
+export function fetchDatabasesIfNeeded (filter, forceRefresh) {
   return (dispatch, getState) => {
-    if (shouldFetchDatabases(getState())) {
+    if (forceRefresh === true || shouldFetchDatabases(getState())) {
       dispatch(fetchDatabases(filter));
     }
   };

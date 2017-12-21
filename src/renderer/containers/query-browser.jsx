@@ -327,6 +327,21 @@ class QueryBrowserContainer extends Component {
     this.props.dispatch(QueryActions.saveToFile(rows, type));
   }
 
+  onRefreshDatabasesClick(){
+    debugger;
+
+    const {connections, dispatch} = this.props;
+
+    const lastConnectedDB = connections.databases[connections.databases.length - 1];
+    const filter = connections.server.filter;
+
+    dispatch(DbAction.fetchDatabasesIfNeeded(filter, true));
+    dispatch(fetchSchemasIfNeeded(lastConnectedDB));
+    dispatch(fetchTablesIfNeeded(lastConnectedDB, filter));
+    dispatch(fetchViewsIfNeeded(lastConnectedDB, filter));
+    dispatch(fetchRoutinesIfNeeded(lastConnectedDB, filter));
+  }
+
   handleExecuteQuery (sqlQuery) {
     const currentQuery = this.getCurrentQuery();
     if (!currentQuery) {
@@ -629,6 +644,10 @@ class QueryBrowserContainer extends Component {
               height={NaN}
               minConstraints={[SIDEBAR_WIDTH, 300]}
               maxConstraints={[750, 10000]}>
+              <div style={{'text-align' : 'center'}}>
+                <button className="ui button"
+                  onClick={::this.onRefreshDatabasesClick}>Refresh</button>
+              </div>
               <div className="ui vertical menu" style={STYLES.resizeable}>
                 <div className="item active" style={{ textAlign: 'center' }}>
                   <b>{connections.server.name}</b>
