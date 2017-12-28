@@ -1,0 +1,11 @@
+html.default-theme {
+    @import "./semantic.default.css";
+}
+
+
+// More themes can be found here
+// http://semantic-ui-forest.com/themes/
+// darkly theme...
+html.dark-theme {
+    @import "./semantic.dark.css";
+}

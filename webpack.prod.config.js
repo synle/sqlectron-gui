@@ -31,8 +31,7 @@ module.exports = {
       // semantic ui
       './vendor/renderer/lato/latofonts.css',
       './vendor/renderer/semantic-ui/semantic.js',
-      './vendor/renderer/semantic-ui/semantic.default.css',
-      './vendor/renderer/semantic-ui/semantic.dark.css',
+      './vendor/renderer/semantic-ui/semantic.css',
     ],
   },
   output: {
