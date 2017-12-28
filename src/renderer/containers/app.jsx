@@ -44,10 +44,14 @@ class AppContainer extends Component {
       // Required for HiDPI support
       webFrame.setZoomFactor(zoomFactor);
     }
+
+    // apply theme...
+    const appWrapper = $('html').removeClass('dark-theme default-theme');
+
     if (enabledDarkTheme === true) {
-      $('body').addClass('dark-theme');
+      appWrapper.addClass('dark-theme');
     } else {
-      $('body').removeClass('dark-theme');
+      appWrapper.removeClass('default-theme');
     }
   }
 
