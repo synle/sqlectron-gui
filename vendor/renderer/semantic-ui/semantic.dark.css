@@ -3,12 +3,6 @@
   @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 */
 
-
-/*
-  dark-theme (dark theme)
-*/
-
-html.dark-theme {
  /*
  * # Semantic UI - 2.2.13
  * https://github.com/Semantic-Org/Semantic-UI
@@ -19,6 +13,7 @@ html.dark-theme {
  * http://opensource.org/licenses/MIT
  *
  */
+
 /*!
  * # Semantic UI 2.2.13 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -37511,4 +37506,3 @@ body.pushable > .pusher {
 /*******************************
          Site Overrides
 *******************************/
-}

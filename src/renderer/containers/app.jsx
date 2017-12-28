@@ -7,8 +7,7 @@ import * as ConfigActions from '../actions/config.js';
 
 import '../../../vendor/renderer/semantic-ui/semantic';
 require('../../../vendor/renderer/lato/latofonts.css');
-require('../../../vendor/renderer/semantic-ui/semantic.default.css');
-require('../../../vendor/renderer/semantic-ui/semantic.dark.css');
+require('../../../vendor/renderer/semantic-ui/semantic.css');
 require('./app.css');
 
 const preventDefault = e => e.preventDefault();
