@@ -46,12 +46,12 @@ class AppContainer extends Component {
     }
 
     // apply theme...
-    const appWrapper = $('html').removeClass('dark-theme default-theme');
+    const appWrapper = $('body').removeClass('dark-theme default-theme');
 
     if (enabledDarkTheme === true) {
       appWrapper.addClass('dark-theme');
     } else {
-      appWrapper.removeClass('default-theme');
+      appWrapper.addClass('default-theme');
     }
   }
 

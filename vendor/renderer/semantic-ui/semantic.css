@@ -3,12 +3,12 @@
 $font1: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 // default theme (white)
-html.default-theme {
+body.default-theme {
     @import "./semantic.default.css";
 }
 
 
 // darkly theme...
-html.dark-theme {
+body.dark-theme {
     @import "./semantic.dark.css";
 }
