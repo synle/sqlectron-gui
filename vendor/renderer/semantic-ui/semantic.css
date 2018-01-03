@@ -1,10 +1,13 @@
+// More themes can be found here
+// http://semantic-ui-forest.com/themes/
+$font1: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+// default theme (white)
 html.default-theme {
     @import "./semantic.default.css";
 }
 
 
-// More themes can be found here
-// http://semantic-ui-forest.com/themes/
 // darkly theme...
 html.dark-theme {
     @import "./semantic.dark.css";
